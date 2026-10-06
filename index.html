@@ -1,0 +1,984 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saint Shiba</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" href="assets/images/fox.webp" type="image/x-png" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+        --font-poppins: "Poppins", sans-serif;
+
+        --text-22: 22px;
+        --leading-180: 180%;
+        --leading-100: 100%;
+        --leading-99: 99%;
+        --leading-150: 150%;
+        --leading-128: 128%;
+
+        --color-black-bg: rgba(12, 11, 11, 1);
+        --color-orange: rgba(240, 101, 0, 1);
+        --color-yellow: rgba(255, 168, 1, 1);
+        --color-yellow-orange: rgba(255, 168, 0, 1);
+        --color-black-blur: rgba(0, 0, 0, 0.75);
+        --color-dark-gray: rgba(29, 26, 26, 1);
+        --color-gray: rgba(21, 19, 19, 1);
+        --color-white-70: rgba(255, 255, 255, 0.7);
+        --color-border-gray: rgba(80, 79, 79, 1);
+
+        --breakpoint-3xl: 1919px;
+
+        --background-image-orange-gradient: linear-gradient(
+          90deg,
+          #ffa800 0%,
+          #f06500 100%
+        );
+        --background-image-bottom-gradient: linear-gradient(
+          180deg,
+          rgba(12, 11, 11, 0) 0%,
+          #0c0b0b 100%
+        );
+
+        --background-image-main-gradient: linear-gradient(
+          94.88deg,
+          rgba(255, 255, 255, 0.1) 0.97%,
+          rgba(255, 255, 255, 0) 103.14%
+        );
+
+        --background-image-border-gradient: linear-gradient(
+          95.21deg,
+          rgba(255, 255, 255, 0.2) -0.59%,
+          rgba(255, 255, 255, 0.092) 106.99%
+        );
+
+        --background-image-amber-gradient: linear-gradient(
+          90deg,
+          #d97706 0%,
+          #c2410c 100%
+        );
+      }
+    </style>
+</head>
+
+<body class="font-poppins bg-black-bg select-none">
+ 
+  <section class="min-h-fit xl:min-h-[1000px] bg-[url(assets/images/bg.webp)] bg-cover bg-center">
+     <header
+    class="h-[clamp(60px,6.94vw,100px)] backdrop:blur-[16px] bg-black-blur flex items-center bg-[url(assets/images/header-bg.webp)] bg-repeat w-full px-4">
+    <div class="container max-w-[1320px] w-full mx-auto">
+      <nav class="nav-bar relative flex w-full items-center justify-between py-[clamp(10px,1.6vw,23px)]">
+        <div class="logo cursor-pointer text-[clamp(24px,2.5vw,36px)]">
+          <h1 class="text-white font-normal leading-180">
+            Saint<span class="text-orange font-medium leading-180">Shiba</span>
+          </h1>
+        </div>
+
+        <input type="checkbox" id="menu-connect" class="peer hidden" />
+
+        <label for="menu-connect"
+          class="menu-button relative z-[60] flex h-5 w-5 cursor-pointer flex-col justify-between xl:hidden [&>span]:block [&>span]:h-[2px] [&>span]:w-5 [&>span]:rounded [&>span]:bg-white [&>span]:transition-all [&>span]:duration-500 [&>span]:ease-in-out peer-checked:[&>span:nth-child(1)]:translate-y-[9px] peer-checked:[&>span:nth-child(1)]:rotate-45 peer-checked:[&>span:nth-child(2)]:scale-0 peer-checked:[&>span:nth-child(2)]:opacity-0 peer-checked:[&>span:nth-child(3)]:-translate-y-[9px] peer-checked:[&>span:nth-child(3)]:-rotate-45">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <div
+          class="right fixed top-0 right-0 z-50 flex h-full w-[70vw] flex-col items-center justify-center gap-[32px] px-5 shadow-2xl invisible pointer-events-none translate-x-full opacity-0 transition-all duration-300 ease-in-out peer-checked:translate-x-0 peer-checked:visible peer-checked:pointer-events-auto peer-checked:opacity-100 max-xl:bg-black xl:static xl:z-auto xl:flex-row xl:items-center xl:gap-[38px] xl:w-auto xl:h-auto xl:p-0 xl:bg-transparent xl:shadow-none xl:translate-x-0 xl:visible xl:pointer-events-auto xl:opacity-100">
+          <div class="items flex flex-col items-center gap-[32px] xl:flex-row">
+            <div class="right-item">
+              <a class="relative inline-block text-lg text-white transition-all duration-500 hover:bg-orange-gradient hover:bg-clip-text hover:text-transparent hover:[-webkit-text-stroke:0.5px_#FFA800] after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-[#FFA800] after:to-[#F06500] after:transition-all after:duration-500 after:ease-out hover:after:w-full"
+                href="">
+                Home
+              </a>
+            </div>
+            <div class="right-item">
+              <a class="relative inline-block text-lg text-white transition-all duration-500 hover:bg-orange-gradient hover:bg-clip-text hover:text-transparent hover:[-webkit-text-stroke:0.5px_#FFA800] after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-[#FFA800] after:to-[#F06500] after:transition-all after:duration-500 after:ease-out hover:after:w-full"
+                href="">
+                About
+              </a>
+            </div>
+            <div class="right-item">
+              <a class="relative inline-block text-lg text-white transition-all duration-500 hover:bg-orange-gradient hover:bg-clip-text hover:text-transparent hover:[-webkit-text-stroke:0.5px_#FFA800] after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-[#FFA800] after:to-[#F06500] after:transition-all after:duration-500 after:ease-out hover:after:w-full"
+                href="">
+                Takenomics
+              </a>
+            </div>
+            <div class="right-item">
+              <a class="relative inline-block text-nowrap text-lg text-white transition-all duration-500 hover:bg-orange-gradient hover:bg-clip-text hover:text-transparent hover:[-webkit-text-stroke:0.5px_#FFA800] after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-[#FFA800] after:to-[#F06500] after:transition-all after:duration-500 after:ease-out hover:after:w-full"
+                href="">
+                How to buy
+              </a>
+            </div>
+            <div class="right-item">
+              <a class="relative inline-block text-nowrap text-lg text-white transition-all duration-500 hover:bg-orange-gradient hover:bg-clip-text hover:text-transparent hover:[-webkit-text-stroke:0.5px_#FFA800] after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-[#FFA800] after:to-[#F06500] after:transition-all after:duration-500 after:ease-out hover:after:w-full"
+                href="">
+                FAQ
+              </a>
+            </div>
+          </div>
+
+          <button
+            class="group text-nowrap cursor-pointer relative h-[46px] max-w-[188px] overflow-hidden rounded-[23px] bg-orange-gradient px-[23px] py-[7px] text-lg font-semibold leading-100 text-white transition-all duration-500">
+            <span
+              class="absolute left-1/2 top-1/2 h-0 w-0 -translate-x-1/2 -translate-y-1/2 rounded-full bg-amber-gradient opacity-0 transition-all duration-500 ease-out group-hover:h-[180px] group-hover:w-[190px] group-hover:opacity-100"></span>
+
+            <span class="relative z-10"> Connect Wallet </span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+    <div class="container max-w-[1320px] w-full mx-auto px-4">
+      <div class="row w-full pt-[59px]">
+        <div class="content flex flex-col xl:flex-row items-center gap-[clamp(30px,6.6vw,95px)]">
+          <div class="left max-w-[660px] w-full flex flex-col xl:items-start items-center ">
+            <h1 class="heading font-bold text-white text-[clamp(32px,6.67vw,96px)] leading-100 xl:text-left text-center">
+              Accumsan ut orci vitae
+            </h1>
+            <p class="para text-[clamp(16px,1.53vw,22px)] mt-6 text-white leading-150 xl:text-left text-center">
+              Velit eget sit nibh fringilla risus ullamcorper malesuada. Morbi
+              nulla suscipit dolor, volutpat quam at urna donec rutrum. In
+              vulputate congue arcu in et.
+            </p>
+            <button
+              class="group cursor-pointer mt-[clamp(20px,3.47vw,50px)] relative h-[57px] max-w-[237px] w-full overflow-hidden rounded-[33px] bg-orange-gradient px-8 py-3 text-22 font-semibold text-white transition-all duration-500">
+              <span
+                class="absolute left-1/2 top-1/2 h-0 w-0 -translate-x-1/2 -translate-y-1/2 rounded-full bg-amber-gradient opacity-0 transition-all duration-500 ease-out group-hover:h-[180px] group-hover:w-[300px] group-hover:opacity-100"></span>
+
+              <span class="relative z-10 leading-150"> Connect Wallet </span>
+            </button>
+          </div>
+          <div class="right">
+            <img width="565" height="841" class="h-auto w-auto xl:h-[841px] xl:w-[565px]" src="assets/images/fox-1.webp"
+              alt="shiba" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-gradient relative hidden xl:block">
+      <div class="gradient bg-bottom-gradient top-[-200px] absolute h-[303px] w-full"></div>
+    </div>
+  </section>
+  <div
+    class="part absolute left-4 right-4 xl:left-0 xl:right-0 z-40 m-auto h-auto xl:h-[341px] -mt-[100px] mb-[58px] max-w-[1320px] rounded-[10px] border border-border-gray border-solid">
+    <div class="h-full w-full p-[clamp(10px,1.67vw,24px)] rounded-[9px] bg-main-gradient backdrop-blur-[32px]">
+      <h1 class="headidg text-[clamp(30px,3.33vw,48px)] font-semibold text-white leading-128">
+        Cursus ligula habitant sed integer.
+      </h1>
+      <p class="para-1 mt-[clamp(16px,1.67vw,24px)] text-[clamp(14px,1.25vw,18px)] text-white-70 font-normal">
+        Urna, dictum volutpat augue tortor. Fermentum vulputate convallis
+        viverra facilisis. Aliquam porttitor sem rhoncus rhoncus, quis. Arcu,
+        ut enim eget pellentesque neque. Nibh pellentesque lobortis etiam sed.
+        Cursus donec porttitor fames tellus. At ut donec nec aliquet ipsum leo
+        tellus amet lacus. Varius mi urna blandit id magna tellus imperdiet
+        tortor. Volutpat nec vulputate diam tristique facilisi in turpis vel
+        elit.
+      </p>
+      <p class="para-2 mt-4 text-[clamp(14px,1.25vw,18px)] text-white-70 font-normal">
+        Urna, dictum volutpat augue tortor. Fermentum vulputate convallis
+        viverra facilisis. Aliquam porttitor sem rhoncus rhoncus, quis. Arcu,
+        ut enim eget pellentesque neque. Nibh pellentesque lobortis etiam sed.
+        Cursus donec porttitor fames tellus. At ut donec nec aliquet ipsum leo
+        tellus amet lacus. Varius mi urna blandit id magna tellus imperdiet
+        tortor. Volutpat nec vulputate diam tristique facilisi in turpis vel
+        elit.
+      </p>
+    </div>
+  </div>
+  <section
+    class="relative min-h-fit bg-[url(assets/images/design.webp)] bg-center bg-cover flex justify-center min-[319px]:pt-[600px] min-[425px]:pt-[430px] sm:pt-[230px] xl:pt-[285px]">
+    <div class="container max-w-[1320px] px-4 mx-auto">
+      <div class="row w-full">
+        <div class="content items-center gap-[clamp(30px,3.82vw,55px)] flex flex-col xl:flex-row">
+          <div class="left max-w-[660px] flex flex-col xl:items-start items-center ">
+            <h1 class="heading text-[clamp(30px,3.33vw,48px)] text-white font-semibold xl:text-left text-center">
+              Cursus ligula habitant sed integer.
+            </h1>
+            <p class="para text-[clamp(14px,1.25vw,18px)] text-white-70 mt-[clamp(16px,1.67vw,24px)] font-normal xl:text-left text-center">
+              Urna, dictum volutpat augue tortor. Fermentum vulputate
+              convallis viverra facilisis. Aliquam porttitor sem rhoncus
+              rhoncus, quis. Arcu, ut enim eget pellentesque neque. Nibh
+              pellentesque lobortis etiam sed. Cursus donec porttitor fames
+              tellus.
+            </p>
+            <button
+              class="group cursor-pointer mt-[clamp(24px,2.71vw,39px)] relative h-[46px] max-w-[150px] w-full overflow-hidden rounded-[33px] bg-orange-gradient px-[23px] py-[7px] text-lg font-semibold text-white transition-all duration-500">
+              <span
+                class="absolute left-1/2 top-1/2 h-0 w-0 -translate-x-1/2 -translate-y-1/2 rounded-full bg-amber-gradient opacity-0 transition-all duration-500 ease-out group-hover:h-[180px] group-hover:w-[200px] group-hover:opacity-100"></span>
+
+              <span class="relative z-10 leading-180"> Learn more </span>
+            </button>
+          </div>
+          <div class="right">
+            <img width="551" height="722" class="w-auto h-auto object-cover" src="assets/images/fox.webp" alt="shiba" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="min-h-fit xl:min-h-[812px] bg-dark-gray overflow-hidden overflow-x-hidden px-4 3xl:px-0">
+    <div
+      class="content py-[60px] md:py-20 lg:pt-[89px] lg:pb-[87px] xl:items-center flex-col xl:flex-row max-w-[1320px] mx-auto 3xl:justify-center 3xl:max-w-full w-full gap-[clamp(30px,3.82vw,55px)] flex">
+      <div class="right max-w-[660px] 3xl:pl-[300px] 3xl:max-w-[960px] w-full">
+        <h1 class="heading text-[clamp(30px,3.33vw,48px)] text-white font-semibold leading-128">
+          How to buy
+        </h1>
+        <p
+          class="para text-white-70 font-normal text-[clamp(14px,1.25vw,18px)] mt-[clamp(16px,1.67vw,24px)] leading-180">
+          Urna, dictum volutpat augue tortor. Fermentum vulputate convallis
+          viverra facilisis. Aliquam porttitor sem rhoncus rhoncus, quis.
+          Arcu, ut enim eget pellentesque neque. Nibh pellentesque lobortis
+          etiam sed. Cursus donec porttitor fames tellus.
+        </p>
+        <div class="part-holder w-full flex flex-col gap-4 mt-[clamp(32px,3.33vw,48px)]">
+          <div
+            class="part cursor-pointer w-full pt-[clamp(8px,0.69vw,10px)] pb-[clamp(8px,0.76vw,11px)] pl-[clamp(8px,0.90vw,13px)] bg-gray rounded-[46px] group hover:bg-black-bg transition-all duration-300 ease-linear">
+            <div class="content flex gap-[clamp(11px,1.6vw,23px)] items-center">
+              <div
+                class="circle size-[clamp(30px,4.93vw,71px)] rounded-full bg-white flex items-center justify-center text-black-bg text-[clamp(16px,1.53vw,22px)] font-semibold group-hover:bg-orange-gradient transition-all duration-300 ease-linear group-hover:text-white">
+                1
+              </div>
+              <div class="text">
+                <h1 class="heading text-[clamp(16px,1.53vw,22px)] font-semibold text-white leading-150">
+                  Cras nunc libero ac
+                </h1>
+                <p
+                  class="para font-normal leading-180 text-white text-[10px] min-[425px]:text-base sm:text-lg md:text-lg">
+                  Amet, integer et ultrices non viverra dolor dui
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="part cursor-pointer w-full pt-[clamp(8px,0.69vw,10px)] pb-[clamp(8px,0.76vw,11px)] pl-[clamp(8px,0.90vw,13px)] bg-gray rounded-[46px] group hover:bg-black-bg transition-all duration-300 ease-linear">
+            <div class="content flex gap-[clamp(11px,1.6vw,23px)] items-center">
+              <div
+                class="circle size-[clamp(30px,4.93vw,71px)] rounded-full bg-white flex items-center justify-center text-black-bg text-[clamp(16px,1.53vw,22px)] font-semibold group-hover:bg-orange-gradient transition-all duration-300 ease-linear group-hover:text-white">
+                2
+              </div>
+              <div class="text">
+                <h1 class="heading text-[clamp(16px,1.53vw,22px)] font-semibold text-white leading-150">
+                  Cras nunc libero ac
+                </h1>
+                <p
+                  class="para font-normal leading-180 text-white text-[10px] min-[425px]:text-base sm:text-lg md:text-lg">
+                  Amet, integer et ultrices non viverra dolor dui
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="part w-full cursor-pointer pt-[clamp(8px,0.69vw,10px)] pb-[clamp(8px,0.76vw,11px)] pl-[clamp(8px,0.90vw,13px)] bg-gray rounded-[46px] group hover:bg-black-bg transition-all duration-300 ease-linear">
+            <div class="content flex gap-[clamp(11px,1.6vw,23px)] items-center">
+              <div
+                class="circle size-[clamp(30px,4.93vw,71px)] rounded-full bg-white flex items-center justify-center text-black-bg text-[clamp(16px,1.53vw,22px)] font-semibold group-hover:bg-orange-gradient transition-all duration-300 ease-linear group-hover:text-white">
+                3
+              </div>
+              <div class="text">
+                <h1 class="heading text-[clamp(16px,1.53vw,22px)] font-semibold text-white leading-150">
+                  Cras nunc libero ac
+                </h1>
+                <p
+                  class="para font-normal leading-180 text-white text-[10px] min-[425px]:text-base sm:text-lg md:text-lg">
+                  Amet, integer et ultrices non viverra dolor dui
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="left">
+        <img width="1056" height="636" class="w-full h-auto object-cover 3xl:hidden" src="assets/images/cut.webp"
+          alt="stats-shh" />
+        <img width="1056" height="636" class="hidden 3xl:block" src="assets/images/cut-og.webp" alt="stats" />
+      </div>
+    </div>
+  </section>
+  <section class="min-h-fit xl:min-h-[3428px] overflow-hidden px-4">
+    <div class="container mx-auto w-full max-w-[1320px]">
+      <div class="row pt-[60px] z-50 lg:pt-[62px]">
+        <h1 class="heading text-center text-[clamp(30px,3.33vw,48px)] font-semibold leading-128 text-white">
+          Takenomics
+        </h1>
+
+        <div class="cards mt-[32px] mb-[22px] flex flex-wrap xl:flex-nowrap justify-center gap-[20px]">
+          <div
+            class="card text-nowrap cursor-pointer w-full group max-w-[424px] rounded-[10px] border border-border-gray bg-main-gradient px-[20px] pt-[16px] pb-[22px] backdrop-blur-[32px] xl:min-w-[424px]">
+            <h1 class="mb-[16px] max-w-[90px] text-[22px] font-normal leading-150 text-white">
+              Liquidity
+            </h1>
+
+            <div class="flex items-center gap-[60px] sm:gap-[106px]">
+              <div class="buying">
+                <h1 class="text-[14px] font-normal leading-180 text-white opacity-[70%]">
+                  When Buying
+                </h1>
+
+                <h2
+                  class="font-semibold text-[28px] leading-150 text-white transition-all duration-300 ease-out group-hover:text-orange">
+                  3-5%
+                </h2>
+              </div>
+
+              <div class="selling mt-1">
+                <h1 class="text-[14px] font-normal leading-180 text-white opacity-[70%]">
+                  When Selling
+                </h1>
+
+                <h2
+                  class="font-semibold text-[28px] leading-150 text-white transition-all duration-300 ease-out group-hover:text-orange">
+                  3-5%
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card text-nowrap w-full cursor-pointer group max-w-[424px] rounded-[10px] border border-border-gray bg-main-gradient px-[20px] pt-[16px] pb-[22px] backdrop-blur-[32px] xl:min-w-[424px]">
+            <h1 class="mb-[16px] max-w-[90px] text-[22px] font-normal leading-150 text-white">
+              Marketing
+            </h1>
+
+            <div class="flex items-center gap-[60px] sm:gap-[106px]">
+              <div class="buying">
+                <h1 class="text-[14px] font-normal leading-180 text-white opacity-[70%]">
+                  When Buying
+                </h1>
+
+                <h2
+                  class="font-semibold text-[28px] leading-150 text-white transition-all duration-300 ease-out group-hover:text-orange">
+                  3-5%
+                </h2>
+              </div>
+
+              <div class="selling mt-1">
+                <h1 class="text-[14px] font-normal leading-180 text-white opacity-[70%]">
+                  When Selling
+                </h1>
+
+                <h2
+                  class="font-semibold text-[28px] leading-150 text-white transition-all duration-300 ease-out group-hover:text-orange">
+                  3-5%
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card text-nowrap w-full cursor-pointer group max-w-[424px] rounded-[10px] border border-border-gray bg-main-gradient px-[20px] pt-[16px] pb-[22px] backdrop-blur-[32px] xl:min-w-[424px]">
+            <h1 class="mb-[16px] max-w-[90px] text-[22px] font-normal leading-150 text-white">
+              Rewards
+            </h1>
+
+            <div class="flex items-center gap-[60px] sm:gap-[106px]">
+              <div class="buying">
+                <h1 class="text-[14px] font-normal leading-180 text-white opacity-[70%]">
+                  When Buying
+                </h1>
+
+                <h2
+                  class="font-semibold text-[28px] leading-150 text-white transition-all duration-300 ease-out group-hover:text-orange">
+                  3-5%
+                </h2>
+              </div>
+
+              <div class="selling mt-1">
+                <h1 class="text-[14px] font-normal leading-180 text-white opacity-[70%]">
+                  When Selling
+                </h1>
+
+                <h2
+                  class="font-semibold text-[28px] leading-150 text-white transition-all duration-300 ease-out group-hover:text-orange">
+                  3-5%
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="data-content mx-[20px] max-w-[1320px] rounded-[10px] border border-border-gray bg-main-gradient backdrop-blur-[32px] lg:mx-auto">
+          <div
+            class="flex max-w-[1320px] flex-wrap xl:flex-nowrap items-center justify-center px-5 py-[40px] sm:justify-between sm:pt-[67px] sm:pb-[70px] lg:pl-[66px] lg:pr-[97px]">
+            <div
+              class="flex max-w-[820px] flex-col items-center justify-center gap-5 sm:gap-[80px] sm:flex-row sm:items-start lg:gap-[157px]">
+              <img width="361" height="361" class="size-[200px] object-cover lg:size-[361px]"
+                src="./assets/images/data.webp" alt="data" />
+
+              <div class="colors mx-auto my-[30px] max-w-[303px]">
+                <div class="mb-[15px] flex w-100 max-w-[303px] items-center justify-center gap-[15px] md:gap-[25px]">
+                  <img width="50" height="50" class="size-[30px] md:size-[50px]" src="./assets/images/cyan.webp"
+                    alt="cyan-color" />
+
+                  <h1 class="text-[18px] font-semibold leading-180 text-white lg:min-w-[228px]">
+                    Sed sem
+                  </h1>
+                </div>
+
+                <div class="mb-[15px] flex w-100 max-w-[303px] items-center justify-center gap-[15px] md:gap-[25px]">
+                  <img width="50" height="50" class="size-[30px] md:size-[50px]" src="./assets/images/orange.webp"
+                    alt="orange-color" />
+
+                  <h1 class="text-[18px] font-semibold leading-180 text-white lg:min-w-[228px]">
+                    Sed sem
+                  </h1>
+                </div>
+
+                <div class="mb-[15px] flex w-100 max-w-[303px] items-center justify-center gap-[15px] md:gap-[25px]">
+                  <img width="50" height="50" class="size-[30px] md:size-[50px]" src="./assets/images/purple.webp"
+                    alt="purple-color" />
+
+                  <h1 class="text-[18px] font-semibold leading-180 text-white lg:min-w-[228px]">
+                    Sed sem
+                  </h1>
+                </div>
+
+                <div class="mb-[15px] flex w-100 max-w-[303px] items-center justify-center gap-[15px] md:gap-[25px]">
+                  <img width="50" height="50" class="size-[30px] md:size-[50px]" src="./assets/images/blue.webp"
+                    alt="blue-color" />
+
+                  <h1 class="text-[18px] font-semibold leading-180 text-white lg:min-w-[228px]">
+                    Sed sem
+                  </h1>
+                </div>
+
+                <div class="mb-[15px] flex w-100 max-w-[303px] items-center justify-center gap-[15px] md:gap-[25px]">
+                  <img width="50" height="50" class="size-[30px] md:size-[50px]" src="./assets/images/yellow.webp"
+                    alt="yellow-color" />
+
+                  <h1 class="text-[18px] font-semibold leading-180 text-white lg:min-w-[228px]">
+                    Sed sem
+                  </h1>
+                </div>
+
+                <div class="mb-[15px] flex w-100 max-w-[303px] items-center justify-center gap-[15px] md:gap-[25px]">
+                  <img width="50" height="50" class="size-[30px] md:size-[50px]" src="./assets/images/pink.webp"
+                    alt="pink-color" />
+
+                  <h1 class="text-[18px] font-semibold leading-180 text-white lg:min-w-[228px]">
+                    Sed sem
+                  </h1>
+                </div>
+              </div>
+            </div>
+
+            <img width="315" height="437" src="./assets/images/fox.webp" alt="shibba" />
+          </div>
+
+          <div class="overflow-x-scroll overflow-hidden">
+            <table class="w-100 min-w-[900px] lg:min-w-[1320px]" cellpadding="0" cellspacing="0">
+              <thead class="bg-[#0C0C0C]">
+                <tr>
+                  <th class="min-w-[135px] xl:w-100"></th>
+
+                  <th class="pt-[14px] pb-[22px] text-[16px] font-semibold leading-180 text-white sm:text-[18px]">
+                    Token
+                  </th>
+
+                  <th class="pt-[14px] pb-[22px] text-[16px] font-semibold leading-180 text-white sm:text-[18px]">
+                    Percentage
+                  </th>
+
+                  <th class="pt-[14px] pb-[22px] text-[16px] font-semibold leading-180 text-white sm:text-[18px]">
+                    Token Price
+                  </th>
+
+                  <th class="pt-[14px] pb-[22px] text-[16px] font-semibold leading-180 text-white sm:text-[18px]">
+                    Token Price
+                  </th>
+
+                  <th class="pt-[14px] pb-[22px] text-[16px] font-semibold leading-180 text-white sm:text-[18px]">
+                    Total Amount
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td
+                    class="pt-[17px] pb-[28px] text-center text-[16px] font-normal leading-180 text-white sm:text-[18px]">
+                    Seddigq
+                  </td>
+
+                  <td
+                    class="pt-[17px] pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    1,00,000
+                  </td>
+
+                  <td
+                    class="pt-[17px] pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    12%
+                  </td>
+
+                  <td
+                    class="pt-[17px] pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    58.3
+                  </td>
+
+                  <td
+                    class="pt-[17px] pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    12%
+                  </td>
+
+                  <td
+                    class="pt-[17px] pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    10% Monthly
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white sm:text-[18px]">
+                    Seddigq
+                  </td>
+
+                  <td
+                    class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    1,00,000
+                  </td>
+
+                  <td
+                    class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    12%
+                  </td>
+
+                  <td
+                    class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    58.3
+                  </td>
+
+                  <td
+                    class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    12%
+                  </td>
+
+                  <td
+                    class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    10% Monthly
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white sm:text-[18px]">
+                    Seddigq
+                  </td>
+
+                  <td
+                    class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    1,00,000
+                  </td>
+
+                  <td
+                    class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    12%
+                  </td>
+
+                  <td
+                    class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    58.3
+                  </td>
+
+                  <td
+                    class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    12%
+                  </td>
+
+                  <td
+                    class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    10% Monthly
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white sm:text-[18px]">
+                    Seddigq
+                  </td>
+
+                  <td
+                    class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    1,00,000
+                  </td>
+
+                  <td
+                    class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    12%
+                  </td>
+
+                  <td
+                    class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    58.3
+                  </td>
+
+                  <td
+                    class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    12%
+                  </td>
+
+                  <td
+                    class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    10% Monthly
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white sm:text-[18px]">
+                    Seddigq
+                  </td>
+
+                  <td
+                    class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    1,00,000
+                  </td>
+
+                  <td
+                    class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    12%
+                  </td>
+
+                  <td
+                    class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    58.3
+                  </td>
+
+                  <td
+                    class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    12%
+                  </td>
+
+                  <td
+                    class="pb-[28px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    10% Monthly
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="pb-[32px] text-center text-[16px] font-normal leading-180 text-white sm:text-[18px]">
+                    Seddigq
+                  </td>
+
+                  <td
+                    class="pb-[32px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    1,00,000
+                  </td>
+
+                  <td
+                    class="pb-[32px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    12%
+                  </td>
+
+                  <td
+                    class="pb-[32px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    58.3
+                  </td>
+
+                  <td
+                    class="pb-[32px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    12%
+                  </td>
+
+                  <td
+                    class="pb-[32px] text-center text-[16px] font-normal leading-180 text-white opacity-[70%] sm:text-[18px]">
+                    10% Monthly
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="row pt-[59px] z-50 pl-5 xl:pl-0">
+        <h1 class="heading text-white text-center text-[clamp(30px,3.33vw,48px)] font-semibold leading-128">
+          Roadmap
+        </h1>
+        <div class="roadmap">
+          <div class="big-card relative mt-[clamp(30px,4.1vw,59px)] w-full max-[1281px]:pl-10">
+            <div
+              class="circle absolute left-1/2 z-10 size-[36px] -translate-x-1/2 rounded-full bg-orange-gradient max-[1281px]:left-[-1%] max-[1281px]:-translate-x-[-1%] max-[376px]:left-[-3%]">
+            </div>
+
+            <div class="card w-full max-w-[547px] rounded-[10px] bg-transparent pr-[25px] max-[1281px]:max-w-full">
+              <h1
+                class="card-heading text-[clamp(24px,2.5vw,36px)] font-bold text-left leading-150 xl:text-right text-white">
+                Phase-1
+              </h1>
+              <p
+                class="para text-[clamp(14px,1.25vw,18px)] text-white opacity-70 leading-180 text-left xl:text-right mt-2">
+                Massa pellentesque sagittis <br />
+                Aliquam sed in odio. <br />
+                Turpis blandit at interdum <br />
+                Eget tempus nulla tempus arcu.
+              </p>
+            </div>
+
+            <div
+              class="absolute top-[30px] left-1/2 z-0 h-[calc(100%+97px)] w-[5px] -translate-x-1/2 bg-white max-[1281px]:left-0 max-[1281px]:translate-x-0 max-[992px]:left-[8px] max-[680px]:left-[8px]">
+            </div>
+          </div>
+
+          <div
+            class="big-card relative mt-4 flex w-full justify-end pl-0 max-[1281px]:justify-start max-[1281px]:pl-10">
+            <div
+              class="circle absolute left-1/2 z-10 size-[36px] -translate-x-1/2 rounded-full bg-orange-gradient max-[1281px]:left-[-1%] max-[1281px]:-translate-x-[-1%] max-[376px]:left-[-3%]">
+            </div>
+            <div class="card w-full max-w-[547px] rounded-[10px] bg-transparent xl:pl-[25px] max-[1281px]:max-w-full">
+              <h1
+                class="card-heading text-[clamp(24px,2.5vw,36px)] leading-150 font-bold leading-150 text-left text-white">
+                Phase-2
+              </h1>
+              <p
+                class="para text-[clamp(14px,1.25vw,18px)] leading-180 text-white leading-180 opacity-70 text-left mt-2">
+                Massa pellentesque sagittis <br />
+                Aliquam sed in odio. <br />
+                Turpis blandit at interdum <br />
+                Eget tempus nulla tempus arcu.
+              </p>
+            </div>
+
+            <div
+              class="absolute top-[30px] left-1/2 z-0 h-[calc(100%+28px)] w-[5px] -translate-x-1/2 bg-white max-[1281px]:left-0 max-[1281px]:translate-x-0 max-[992px]:left-[8px] max-[680px]:left-[8px]">
+            </div>
+          </div>
+
+          <div class="big-card relative mt-4 w-full max-[1281px]:pl-10">
+            <div
+              class="circle absolute left-1/2 z-10 size-[36px] -translate-x-1/2 rounded-full bg-orange-gradient max-[1281px]:left-[-1%] max-[1281px]:-translate-x-[-1%] max-[376px]:left-[-3%]">
+            </div>
+
+            <div class="card w-full max-w-[547px] rounded-[10px] bg-transparent pr-[25px] max-[1281px]:max-w-full">
+              <h1
+                class="card-heading text-[clamp(24px,2.5vw,36px)] font-bold leading-150 text-left xl:text-right text-white">
+                Phase-3
+              </h1>
+              <p
+                class="para text-[clamp(14px,1.25vw,18px)] text-white opacity-70 leading-180 text-left xl:text-right mt-2">
+                Massa pellentesque sagittis <br />
+                Aliquam sed in odio. <br />
+                Turpis blandit at interdum <br />
+                Eget tempus nulla tempus arcu.
+              </p>
+            </div>
+
+            <div
+              class="absolute top-[30px] left-1/2 z-0 h-[calc(100%+20px)] w-[5px] -translate-x-1/2 bg-white max-[1281px]:left-0 max-[1281px]:translate-x-0 max-[992px]:left-[8px] max-[680px]:left-[8px]">
+            </div>
+          </div>
+
+          <div
+            class="big-card relative mt-4 flex w-full justify-end pl-0 max-[1281px]:justify-start max-[1281px]:pl-10">
+            <div
+              class="circle absolute left-1/2 z-10 size-[36px] -translate-x-1/2 rounded-full bg-orange-gradient max-[1281px]:left-[-1%] max-[1281px]:-translate-x-[-1%] max-[376px]:left-[-3%]">
+            </div>
+
+            <div class="card w-full max-w-[547px] rounded-[10px] bg-transparent xl:pl-[25px] max-[1281px]:max-w-full">
+              <h1 class="card-heading text-[clamp(24px,2.5vw,36px)] font-bold text-left leading-150 text-white">
+                Phase-4
+              </h1>
+              <p class="para text-[clamp(14px,1.25vw,18px)] text-white opacity-70 text-left leading-180 mt-2">
+                Massa pellentesque sagittis <br />
+                Aliquam sed in odio. <br />
+                Turpis blandit at interdum <br />
+                Eget tempus nulla tempus arcu.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row py-[60px] z-50 lg:py-0 lg:pt-[73px]">
+        <h1 class="heading text-center text-[clamp(30px,3.33vw,48px)] text-white font-semibold">
+          FAQ
+        </h1>
+        <div class="accordions flex flex-col mt-[clamp(24px,2.22vw,32px)] gap-2">
+          <div class="w-full bg-main-gradient border border-solid border-gray rounded-[10px] backdrop-blur-[32px] p-4">
+            <input type="checkbox" id="accordion-toggle-1" class="peer hidden" />
+
+            <label for="accordion-toggle-1"
+              class="flex items-center justify-between list-none cursor-pointer select-none">
+              <span class="heading text-[clamp(16px,1.53vw,22px)] leading-[150%] text-white font-semibold">
+                Volutpat consequat dictumst vel donec.
+              </span>
+
+              <span class="transition-transform duration-500 [input:checked~label_&]:rotate-180">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.293 9.29297L12 13.586L7.70697 9.29297L6.29297 10.707L12 16.414L17.707 10.707L16.293 9.29297Z"
+                    fill="white" />
+                </svg>
+              </span>
+            </label>
+
+            <div
+              class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-in-out peer-checked:grid-rows-[1fr]">
+              <div class="overflow-hidden">
+                <p class="para pt-[24px] text-white opacity-70 text-[clamp(14px,1.5vw,18px)] leading-180">
+                  Amet vitae hendrerit facilisi gravida. Nascetur sed luctus
+                  sit elit in mi orci. Aliquet ullamcorper quis felis at
+                  scelerisque non faucibus. Amet vitae hendrerit facilisi
+                  gravida. Nascetur sed luctus sit elit in mi orci. Aliquet
+                  ullamcorper quis felis at scelerisque non faucibus.Amet
+                  vitae hendrerit facilisi gravida. Nascetur sed luctus sit
+                  elit in mi orci. Aliquet ullamcorper quis felis at
+                  scelerisque non faucibus.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full bg-main-gradient border border-solid border-gray rounded-[10px] backdrop-blur-[32px] p-4">
+            <input type="checkbox" id="accordion-toggle-2" class="peer hidden" checked />
+
+            <label for="accordion-toggle-2"
+              class="flex items-center justify-between list-none cursor-pointer select-none">
+              <span class="heading text-[clamp(16px,1.53vw,22px)] leading-[150%] text-white font-semibold">
+                Volutpat consequat dictumst vel donec.
+              </span>
+
+              <span class="transition-transform duration-500 [input:checked~label_&]:rotate-180">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.293 9.29297L12 13.586L7.70697 9.29297L6.29297 10.707L12 16.414L17.707 10.707L16.293 9.29297Z"
+                    fill="white" />
+                </svg>
+              </span>
+            </label>
+
+            <div
+              class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-in-out peer-checked:grid-rows-[1fr]">
+              <div class="overflow-hidden">
+                <p class="para pt-[24px] text-white opacity-70 text-[clamp(14px,1.5vw,18px)] leading-180">
+                  Amet vitae hendrerit facilisi gravida. Nascetur sed luctus
+                  sit elit in mi orci. Aliquet ullamcorper quis felis at
+                  scelerisque non faucibus. Amet vitae hendrerit facilisi
+                  gravida. Nascetur sed luctus sit elit in mi orci. Aliquet
+                  ullamcorper quis felis at scelerisque non faucibus.Amet
+                  vitae hendrerit facilisi gravida. Nascetur sed luctus sit
+                  elit in mi orci. Aliquet ullamcorper quis felis at
+                  scelerisque non faucibus.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full bg-main-gradient border border-solid border-gray rounded-[10px] backdrop-blur-[32px] p-4">
+            <input type="checkbox" id="accordion-toggle-3" class="peer hidden" />
+
+            <label for="accordion-toggle-3"
+              class="flex items-center justify-between list-none cursor-pointer select-none">
+              <span class="heading text-[clamp(16px,1.53vw,22px)] leading-[150%] text-white font-semibold">
+                Volutpat consequat dictumst vel donec.
+              </span>
+
+              <span class="transition-transform duration-500 [input:checked~label_&]:rotate-180">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.293 9.29297L12 13.586L7.70697 9.29297L6.29297 10.707L12 16.414L17.707 10.707L16.293 9.29297Z"
+                    fill="white" />
+                </svg>
+              </span>
+            </label>
+
+            <div
+              class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-in-out peer-checked:grid-rows-[1fr]">
+              <div class="overflow-hidden">
+                <p class="para pt-[24px] text-white opacity-70 text-[clamp(14px,1.5vw,18px)] leading-180">
+                  Amet vitae hendrerit facilisi gravida. Nascetur sed luctus
+                  sit elit in mi orci. Aliquet ullamcorper quis felis at
+                  scelerisque non faucibus. Amet vitae hendrerit facilisi
+                  gravida. Nascetur sed luctus sit elit in mi orci. Aliquet
+                  ullamcorper quis felis at scelerisque non faucibus.Amet
+                  vitae hendrerit facilisi gravida. Nascetur sed luctus sit
+                  elit in mi orci. Aliquet ullamcorper quis felis at
+                  scelerisque non faucibus.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full bg-main-gradient border border-solid border-gray rounded-[10px] backdrop-blur-[32px] p-4">
+            <input type="checkbox" id="accordion-toggle-4" class="peer hidden" />
+
+            <label for="accordion-toggle-4"
+              class="flex items-center justify-between list-none cursor-pointer select-none">
+              <span class="heading text-[clamp(16px,1.53vw,22px)] leading-[150%] text-white font-semibold">
+                Volutpat consequat dictumst vel donec.
+              </span>
+
+              <span class="transition-transform duration-500 [input:checked~label_&]:rotate-180">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.293 9.29297L12 13.586L7.70697 9.29297L6.29297 10.707L12 16.414L17.707 10.707L16.293 9.29297Z"
+                    fill="white" />
+                </svg>
+              </span>
+            </label>
+
+            <div
+              class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-in-out peer-checked:grid-rows-[1fr]">
+              <div class="overflow-hidden">
+                <p class="para pt-[24px] text-white opacity-70 text-[clamp(14px,1.5vw,18px)] leading-180">
+                  Amet vitae hendrerit facilisi gravida. Nascetur sed luctus
+                  sit elit in mi orci. Aliquet ullamcorper quis felis at
+                  scelerisque non faucibus. Amet vitae hendrerit facilisi
+                  gravida. Nascetur sed luctus sit elit in mi orci. Aliquet
+                  ullamcorper quis felis at scelerisque non faucibus.Amet
+                  vitae hendrerit facilisi gravida. Nascetur sed luctus sit
+                  elit in mi orci. Aliquet ullamcorper quis felis at
+                  scelerisque non faucibus.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full bg-main-gradient border border-solid border-gray rounded-[10px] backdrop-blur-[32px] p-4">
+            <input type="checkbox" id="accordion-toggle-5" class="peer hidden" />
+
+            <label for="accordion-toggle-5"
+              class="flex items-center justify-between list-none cursor-pointer select-none">
+              <span class="heading text-[clamp(16px,1.53vw,22px)] leading-[150%] text-white font-semibold">
+                Volutpat consequat dictumst vel donec.
+              </span>
+
+              <span class="transition-transform duration-500 [input:checked~label_&]:rotate-180">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.293 9.29297L12 13.586L7.70697 9.29297L6.29297 10.707L12 16.414L17.707 10.707L16.293 9.29297Z"
+                    fill="white" />
+                </svg>
+              </span>
+            </label>
+
+            <div
+              class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-in-out peer-checked:grid-rows-[1fr]">
+              <div class="overflow-hidden">
+                <p class="para pt-[24px] text-white opacity-70 text-[clamp(14px,1.5vw,18px)] leading-180">
+                  Amet vitae hendrerit facilisi gravida. Nascetur sed luctus
+                  sit elit in mi orci. Aliquet ullamcorper quis felis at
+                  scelerisque non faucibus. Amet vitae hendrerit facilisi
+                  gravida. Nascetur sed luctus sit elit in mi orci. Aliquet
+                  ullamcorper quis felis at scelerisque non faucibus.Amet
+                  vitae hendrerit facilisi gravida. Nascetur sed luctus sit
+                  elit in mi orci. Aliquet ullamcorper quis felis at
+                  scelerisque non faucibus.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="designs relative hidden sm:block">
+      <img width="537" height="716" class="absolute top-[-1350px] left-[-8%] object-contain h-[716px] hidden xl:block"
+        src="assets/images/design-left.webp" alt="" />
+      <img width="537" height="716" class="absolute top-[-1550px] right-[-8%] object-contain h-[716px] hidden xl:block"
+        src="assets/images/design-right.webp" alt="" />
+      <img width="537" height="716" class="absolute top-[200px] right-[-7%] object-contain h-[716px] hidden xl:block"
+        src="assets/images/design-right.webp" alt="" />
+      <div
+        class="circle bg-yellow relative top-[-1200px] xl:top-[-1350px] right-[-95%] size-[100px] xl:size-[292px] rounded-full blur-[100px] xl:blur-[200px]">
+      </div>
+      <div
+        class="circle bg-yellow relative hidden xl:block xl:top-[110px] right-[-95%] size-[100px] xl:size-[292px] rounded-full blur-[100px] xl:blur-[200px]">
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
